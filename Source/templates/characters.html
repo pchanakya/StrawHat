@@ -2,5 +2,13 @@
 
 {% block content %}
     <h1>{% block title %} Characters {% endblock %}</h1>
-    <h1>Luffy Zoro Sanji</h1>
+    <nav>
+        <a href="{{ url_for('luffy') }}">Luffy</a>
+        <a href="{{ url_for('zoro') }}">Zoro</a>
+        <a href="{{ url_for('sanji') }}">Sanji</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
 {% endblock %}
