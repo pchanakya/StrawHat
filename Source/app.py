@@ -11,6 +11,9 @@ def hello():
 @app.route('/about/')
 def about():
     return render_template('about.html')
+@app.route('/characters/')
+def characters():
+    return render_template('characters.html')
 @app.route('/capitalize/<word>/')
 def capitalize(word):
     return '<h1>{}</h1>'.format(escape(word.capitalize()))
